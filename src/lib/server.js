@@ -4,6 +4,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import logger from './logger';
+import errorMiddleware from './error-middleware';
 
 const app = express();
 let server = null;
