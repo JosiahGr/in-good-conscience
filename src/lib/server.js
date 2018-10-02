@@ -26,6 +26,8 @@ const startServer = () => {
     .then(() => {
       server = app.listen(process.env.PORT, () => {
         logger.log(logger.INFO, `Server is listening on port ${process.env.PORT}`);
+      }).catch((err) => {
+        logger.log(logger.INGO, 'Not connected to Database', err);
       });
     });
 };

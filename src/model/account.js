@@ -1,6 +1,4 @@
-'use strict';
-
-// Refactor for crypto being obsolete. It's now a built in node module. 
+'use strict'; 
 
 import mongoose from 'mongoose';
 import bcrypt from 'bcrypt';
@@ -30,10 +28,6 @@ const accountSchema = mongoose.Schema({
     type: String,
     required: true,
     unique: true,
-  },
-  isAdmin: {
-    type: Boolean,
-    default: false,
   },
   createdOn: {
     type: Date,
